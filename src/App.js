@@ -28,6 +28,7 @@ export default function App() {
         </ul>
       </div>
       <Forecast />
+      <a href="https://github.com/CorinnaGen/my-app">I appreciate your advice and suggestions!</a>
     </div>
   );
 }
