@@ -1,0 +1,15 @@
+h2 {
+  font-family: "Varela Round", sans-serif;
+  position: relative;
+  color: #db6400;
+  text-align: left;
+  margin: auto 0;
+  top: 10px;
+  bottom: 20px;
+  font-size: 15px;
+}
+hr {
+  position: relative;
+  top: 40px;
+  bottom: 10px;
+}

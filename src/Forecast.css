@@ -1,0 +1,24 @@
+p {
+  color: #16697a;
+  text-align: left;
+  margin: auto 0;
+  padding-top: 50px;
+  bottom: 20px;
+}
+
+h3 {
+  color: #db6400;
+  text-align: left;
+  margin: auto 0;
+  top: 40px;
+  bottom: 20px;
+}
+div.col-1 {
+  margin: auto 0;
+  padding: 20px, 10px;
+  text-align: center;
+}
+
+.row {
+  font-family: "Varela Round", sans-serif;
+}

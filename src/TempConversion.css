@@ -1,0 +1,12 @@
+span {
+  text-transform: capitalize;
+  color: #16697a;
+  text-align: left;
+  margin: auto 0;
+  font-size: 20px;
+}
+
+li {
+  display: block;
+  margin: auto 0;
+}
