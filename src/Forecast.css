@@ -1,5 +1,5 @@
 p {
-  color: #16697a;
+  color: #fbf2d5;
   text-align: left;
   margin: auto 0;
   padding-top: 50px;
@@ -7,7 +7,7 @@ p {
 }
 
 h3 {
-  color: #db6400;
+  color: #fbf2d5;
   text-align: left;
   margin: auto 0;
   top: 40px;
@@ -20,5 +20,5 @@ div.col-1 {
 }
 
 .row {
-  font-family: "Varela Round", sans-serif;
+  font-family: 'Shadows Into Light', cursive;
 }

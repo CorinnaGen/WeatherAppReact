@@ -1,5 +1,10 @@
 form {
-  font-family: "Varela Round", sans-serif;
+  font-family: 'Shadows Into Light', cursive;
   position: relative;
   top: 10px;
+}
+input {font-family: 'Shadows Into Light', cursive;
+  position: relative;
+  color:black;
+
 }

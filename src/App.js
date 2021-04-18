@@ -12,7 +12,7 @@ export default function App() {
         <h1>
           {" "}
           Bari <span id="heading"></span>
-          <img id="main-icon" src="" alt="sun" />
+          <img id="main-icon" src="" alt="weather" />
           <span id="description"></span>
         </h1>
         <Date />

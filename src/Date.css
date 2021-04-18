@@ -1,12 +1,12 @@
 h2 {
-  font-family: "Varela Round", sans-serif;
+   font-family: 'Shadows Into Light', cursive;
   position: relative;
-  color: #db6400;
+  color: #7fa99b;
   text-align: left;
   margin: auto 0;
   top: 10px;
   bottom: 20px;
-  font-size: 15px;
+  font-size: 25px;
 }
 hr {
   position: relative;

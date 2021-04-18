@@ -2,40 +2,43 @@
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  border: 2px solid #16697a;
+  border: 2px solid #fbf2d5;
   border-radius: 5px;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: radial-gradient(circle at 10% 20%, rgb(87, 108, 117) 0%, rgb(37, 50, 55) 100.2%);
 }
 
 h1,
 ul,
 span,
-div {
-  font-family: "Varela Round", sans-serif;
+div,a{
+  font-family: 'Shadows Into Light', cursive;
   position: relative;
 }
 
 h1 {
-  color: #16697a;
+  color: #fbf2d5;
   text-align: left;
   margin: auto 0;
   padding-top: 40px;
+  font-size: 45px;
 }
 
 span {
   text-transform: capitalize;
-  color: #16697a;
+  color:#fbf2d5;
   text-align: left;
   margin: auto 0;
   font-size: 20px;
 }
 
-ul {
+ul {color:#fbf2d5;
   list-style: none;
+  font-size: 25px;
 }
 
 li {
   display: block;
   margin: auto 0;
 }
-
+a{color:#fbf2d5;
+font-size: 15px;}

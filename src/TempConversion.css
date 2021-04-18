@@ -1,9 +1,10 @@
 span {
   text-transform: capitalize;
-  color: #16697a;
+  color: #fbf2d5;
   text-align: left;
   margin: auto 0;
-  font-size: 20px;
+  font-size: 30px;
+   font-family: 'Shadows Into Light', cursive;
 }
 
 li {
