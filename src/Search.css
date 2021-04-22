@@ -6,5 +6,7 @@ form {
 input {font-family: 'Shadows Into Light', cursive;
   position: relative;
   color:black;
-
 }
+ input[type=text]{background-image: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-256.png');
+
+ }

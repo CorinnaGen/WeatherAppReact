@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import "./App.css";
 import Date from "./Date";
 import TempConversion from "./TempConversion";
@@ -6,23 +7,37 @@ import Search from "./Search";
 import Forecast from "./Forecast";
 
 export default function App() {
+  const [weatherData, setWeatherData] = useState({ready: false});
+  function handleResponse(response){
+  setWeatherData({
+    ready: true,
+    temperature: response.data.main.temp,
+    description: response.data.main.weather[0].description,
+    city: response.data.main.name,
+    wind: response.data.wind.speed,
+    humidity:response.data.main.humidity,
+  });
+  }
+ 
+
+ if(weatherData.ready) {
   return (
     <div className="App">
       <div class="container">
         <h1>
-          {" "}
-          Bari <span id="heading"></span>
+          {weatherData.city} <span id="heading"></span>
           <img id="main-icon" src="" alt="weather" />
-          <span id="description"></span>
+          <span id="description">{weatherData.description}</span>
         </h1>
         <Date />
         <ul>
+          {Math.round(weatherData.temperature)}
           <TempConversion />
           <li>
-            Humidity: <span id="humidity"> 20% </span>
+            {weatherData.humidity}: <span id="humidity"> 20% </span>
           </li>
           <li>
-            Wind: <span id="wind"> 5 km/h</span>
+            {weatherData.wind}: <span id="wind"> 5 km/h</span>
           </li>
           <Search />
         </ul>
@@ -30,6 +45,13 @@ export default function App() {
       <Forecast />
       <a href="https://github.com/CorinnaGen/my-app">I appreciate your advice and suggestions!</a>
     </div>
-  );
+  );}
+  else {
+  const apiKey ="94128e0a800f0999e0bbd83894a5cfd3";
+  let city = "London";
+  let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=~${city}&appid=${apiKey}`;
+ axios.get(apiUrl).then(handleResponse);
+    return "Loading..."
+  }
 }
 
