@@ -6,12 +6,13 @@ import TempConversion from "./TempConversion";
 import Search from "./Search";
 import Forecast from "./Forecast";
 
-export default function App() {
+export default function App(props) {
   const [weatherData, setWeatherData] = useState({ready: false});
   function handleResponse(response){
   setWeatherData({
     ready: true,
     temperature: response.data.main.temp,
+    date: new Date(response.data.dt*1000),
     description: response.data.main.weather[0].description,
     city: response.data.main.name,
     wind: response.data.wind.speed,
@@ -23,13 +24,13 @@ export default function App() {
  if(weatherData.ready) {
   return (
     <div className="App">
-      <div class="container">
+      <div className="container">
         <h1>
           {weatherData.city} <span id="heading"></span>
           <img id="main-icon" src="" alt="weather" />
           <span id="description">{weatherData.description}</span>
         </h1>
-        <Date />
+        <Date date={weatherData.date}/>
         <ul>
           {Math.round(weatherData.temperature)}
           <TempConversion />
@@ -47,11 +48,10 @@ export default function App() {
     </div>
   );}
   else {
-  const apiKey ="94128e0a800f0999e0bbd83894a5cfd3";
-  let city = "London";
-  let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=~${city}&appid=${apiKey}`;
+  const apiKey ="35ff16e74e68adae9ff398085403f122";
+  let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=~${props.city}&appid=${apiKey}`;
  axios.get(apiUrl).then(handleResponse);
-    return "Loading..."
+    return "Loading...";
   }
 }
 
