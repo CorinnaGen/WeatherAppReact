@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App defaultCity="Bari"/>
+    <App defaultCity="Rome"/>
   </React.StrictMode>,
   document.getElementById('root')
 );
