@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
-import Date from "./Date";
+import FormattedDate from "./FormattedDate";
 import TempConversion from "./TempConversion";
 import Search from "./Search";
 import Forecast from "./Forecast";
@@ -29,7 +29,7 @@ export default function App(props) {
           <img id="main-icon" src="" alt="weather" />
           <span id="description">{weatherData.description}</span>
         </h1>
-        <formattedDate date={weatherData.date}/>
+        <FormattedDate date={weatherData.date}/>
         <ul>
           {Math.round(weatherData.temperature)}
           <TempConversion />
