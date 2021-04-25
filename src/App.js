@@ -29,7 +29,7 @@ export default function App(props) {
           <img id="main-icon" src="" alt="weather" />
           <span id="description">{weatherData.description}</span>
         </h1>
-        <Date date={weatherData.date}/>
+        <formattedDate date={weatherData.date}/>
         <ul>
           {Math.round(weatherData.temperature)}
           <TempConversion />
