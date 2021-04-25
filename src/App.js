@@ -48,7 +48,7 @@ export default function App(props) {
   );}
   else {
   const apiKey ="2ddba96f0fcb6192487bc316e83fa5a2";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=~${props.city}&appid=${apiKey}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=~${props.defaultCity}&appid=${apiKey}`;
  axios.get(apiUrl).then(handleResponse);
     return "Loading...";
   }
