@@ -20,7 +20,6 @@ export default function App(props) {
   });
   }
  
-
  if(weatherData.ready) {
   return (
     <div className="App">
@@ -49,7 +48,7 @@ export default function App(props) {
   );}
   else {
   const apiKey ="35ff16e74e68adae9ff398085403f122";
-  let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=~${props.city}&appid=${apiKey}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=~${props.city}&appid=${apiKey}`;
  axios.get(apiUrl).then(handleResponse);
     return "Loading...";
   }
