@@ -3,7 +3,7 @@ import "./Date.css";
 
 export default function Date(props) {
     let days=["Sunday", "Monday", "Tuesday","Wednesday", "Thursday", "Friday", "Saturday"]
-    let date= days[props.date.getDay()];
+    let date= days[props.date.getDate()];
     let hours=props.date.getHours();
     if (hours <10){
       hours= `0${hours}`;
