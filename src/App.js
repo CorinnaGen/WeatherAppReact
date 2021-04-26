@@ -28,16 +28,16 @@ export default function App(props) {
           {weatherData.city} <span id="heading"></span>
           <img id="main-icon" src="" alt="weather" />
           <span id="description">{weatherData.description}</span>
-        </h1>
+        </h1> Today is
         <FormattedDate date={weatherData.date}/>
-        <ul>
-          {Math.round(weatherData.temperature)}
+        <ul> Temperature: <span>
+          {Math.round(weatherData.temperature)}</span>
           <TempConversion />
           <li>
-            {weatherData.humidity}: <span id="humidity"> 20% </span>
+           Humidity: <span id="humidity">  {weatherData.humidity} %</span>
           </li>
-          <li>
-            {weatherData.wind}: <span id="wind"> 5 km/h</span>
+          <li> Wind:
+            <span id="wind"> {Math.round(weatherData.wind)}km/h </span>
           </li>
           <Search />
         </ul>
@@ -48,7 +48,7 @@ export default function App(props) {
   );}
   else {
   const apiKey ="2ddba96f0fcb6192487bc316e83fa5a2";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
  axios.get(apiUrl).then(handleResponse);
     return "Loading...";
   }

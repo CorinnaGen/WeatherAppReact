@@ -2,6 +2,8 @@ import React from "react";
 import "./Search.css";
 
 export default function Search() {
+
+  
   return (
     <li className="Search">
       <form id="choose-form">
@@ -11,6 +13,7 @@ export default function Search() {
           placeholder="Search city"
           autocomplete="off"
           autofocus="on"
+          
         />
         <input type="submit" id="submit-button" value="Search" />
         <input type="submit" id="current-button" value="Current position" />
