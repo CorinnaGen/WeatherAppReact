@@ -12,9 +12,10 @@ export default function App(props) {
     temperature: response.data.main.temp,
     date: new Date(response.data.dt*1000),
     description: response.data.weather[0].description,
-    city: response.data.main.name,
+    city: response.data.name,
     wind: response.data.wind.speed,
     humidity:response.data.main.humidity,
+    icon: response.data.weather[0].icon,
   });
   }
 function TypeCity(){
