@@ -7,33 +7,22 @@ export default function Weatherinfo(props) { return(
     <div className="WeatherInfo">
     <div className="container">
         <h1>
-          {props.data.city} <span id="heading"></span>
+          {props.infoWeather.city} <span id="heading"></span>
           <img id="main-icon" src="" alt="weather" />
-          <span id="description">{props.data.description}</span>
-        </h1> Today is
-        <FormattedDate date={props.data.date}/>
+          <span id="description">{props.infoWeather.description}</span>
+        </h1> 
+        <FormattedDate date={props.infoWeather.date}/>
         <ul> Temperature: <span>
-          {Math.round(props.data.temperature)}</span>
+          {Math.round(props.infoWeather.temperature)}</span>
           <TempConversion />
           <li>
-           Humidity: <span id="humidity">  {props.data.humidity} %</span>
+           Humidity: <span id="humidity">  {props.infoWeather.humidity} %</span>
           </li>
           <li> Wind:
-            <span id="wind"> {Math.round(props.data.wind)}km/h </span>
+            <span id="wind"> {Math.round(props.infoWeather.wind)}km/h </span>
           </li>
            <li className="Search">
-      <form id="choose-form">
-        <input
-          type="text"
-          id="city-input"
-          placeholder="Search city"
-          autocomplete="off"
-          autofocus="on"
-          
-        />
-        <input type="submit" id="submit-button" value="Search" />
-        <input type="submit" id="current-button" value="Current position" />
-      </form>
+     
     </li>
         </ul>
       </div>

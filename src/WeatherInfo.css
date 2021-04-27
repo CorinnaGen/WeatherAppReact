@@ -1,0 +1,35 @@
+h1,
+ul,
+span,
+div,a{
+  font-family: 'Shadows Into Light', cursive;
+  position: relative;
+}
+
+h1 {
+  color: #fbf2d5;
+  text-align: left;
+  margin: auto 0;
+  padding-top: 40px;
+  font-size: 45px;
+}
+
+span {
+  text-transform: capitalize;
+  color:#fbf2d5;
+  text-align: left;
+  margin: auto 0;
+  font-size: 20px;
+}
+
+ul {color:#fbf2d5;
+  list-style: none;
+  font-size: 25px;
+}
+
+li {
+  display: block;
+  margin: auto 0;
+}
+a{color:#fbf2d5;
+font-size: 15px;}
