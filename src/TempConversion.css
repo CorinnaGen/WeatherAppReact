@@ -1,4 +1,4 @@
-span,a {
+span, {
   text-transform: capitalize;
   color: #fbf2d5;
   text-align: left;
@@ -10,4 +10,13 @@ span,a {
 li {
   display: block;
   margin: auto 0;
+}
+
+a{  text-transform: capitalize;
+  color: #fbf2d5;
+  text-align: left;
+  margin: auto 0;
+  font-size: 10px;
+   font-family: 'Shadows Into Light', cursive;
+
 }
