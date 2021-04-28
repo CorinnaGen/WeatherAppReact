@@ -1,34 +1,17 @@
 import React from "react";
 import "./Forecast.css";
+import WeatherIcon from "./WeatherIcon";
 
 
 
 export default function Forecast() {
-  return (
-    <p className="Forecast">
-      Per hours:{" "}
-      <div class="row" id="forecast">
-        <div class="col-3">
-          8 am
-          <br />
-          <i class="fas fa-sun"></i>
-        </div>
-        <div class="col-3">
-          12 pm
-          <br />
-          <i class="fas fa-cloud-sun"></i>
-        </div>
-        <div class="col-3">
-          4 pm
-          <br />
-          <i class="fas fa-cloud-sun"></i>
-        </div>
-        <div class="col-3">
-          12 am
-          <br />
-          <i class="fas fa-cloud-moon"></i>
-        </div>
+  return (<div className="Forecast">
+    <div className="row">
+      <div className="col">
+        <div className="forecast-day">Thu</div> <WeatherIcon code="01d"/> <div className="forecast-temp"><span className="temp-max">19º</span>
+        <span className="temp-min"> 10º</span></div>
+
       </div>
-    </p>
-  );
-}
+    </div>
+
+  </div>);}
