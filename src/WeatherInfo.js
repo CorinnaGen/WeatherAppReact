@@ -11,13 +11,12 @@ export default function Weatherinfo(props) { return(
           {props.infoWeather.city} <span id="heading"></span></h1> 
          <h2> <span id="description">{props.infoWeather.description}</span></h2>
          <div className="float-left">
-         <WeatherIcon code={props.infoWeather.icon} alt={props.infoWeather.description}/>
+         <WeatherIcon code={props.infoWeather.icon} />
          </div>
         
         <FormattedDate date={props.infoWeather.date}/>
-        <ul> Temperature: <span>
-          {Math.round(props.infoWeather.temperature)}</span>
-          <TempConversion />
+        <ul>
+          <TempConversion celsius={props.infoWeather.temperature}/>
           <li>
            Humidity: <span id="humidity">  {props.infoWeather.humidity} %</span>
           </li>
