@@ -16,7 +16,7 @@ export default function TempConversion(props) {
   return (
     <li className="TempConversion">
        Temperature: <span>
-          {Math.round(props.celsius)} <a href="/" onClick={convertToC}>ºC</a> | <a href="/" onClick={convertToF}> ºF</a></span>
+          {Math.round(props.celsius)} <a href="/" onClick={convertToC} className="C">ºC</a> | <a href="/" onClick={convertToF} className="F"> ºF</a></span>
           
 
       

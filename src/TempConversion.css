@@ -12,11 +12,19 @@ li {
   margin: auto 0;
 }
 
-a{  text-transform: capitalize;
+a.C{  text-transform: capitalize;
   color: #fbf2d5;
   text-align: left;
   margin: auto 0;
-  font-size: 20px;
+  font-size: 25px;
+   font-family: 'Shadows Into Light', cursive;
+
+}
+a.F{  text-transform: capitalize;
+  color: #fbf2d5;
+  text-align: left;
+  margin: auto 0;
+  font-size: 25px;
    font-family: 'Shadows Into Light', cursive;
 
 }

@@ -2,17 +2,22 @@ div.forecast-temp {
   color: #fbf2d5;
   text-align: left;
   margin: auto 0;
-  padding-top: 50px;
-  bottom: 20px;
-  font-size: 15px;
+  font-size: 10px;
+}
+span.temp-max{
+  font-size:20px;
+  font-weight: 800px;
+}
+span.temp-min{
+  font-size:20px;
+  font-weight:100px;
 }
 
 div.forecast-day {
   color: #fbf2d5;
   text-align: left;
   margin: auto 0;
-  top: 40px;
-  bottom: 20px;
+  
 }
 div.col-1 {
   margin: auto 0;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Forecast.css";
 import axios from "axios";
 import WeatherIcon from "./WeatherIcon";
@@ -6,23 +6,34 @@ import WeatherIcon from "./WeatherIcon";
 
 
 export default function Forecast(props) { 
+  const[loaded, setLoaded]= useState(false);
+  const[forecastData, setforecastData] = useState(null);
+
 function handleResponse(response){
-  console.log(response.data);
+  setforecastData(response.data.daily);
+  setLoaded(true);
 }
 
-  let apiKey = "96f0fcb6192487bc316e83fa5a2";
-  let lon = props.coordinates.lon;
-  let lat= props.coordinates.lat;
-  let apiURL=`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude={part}&appid=${apiKey}`;
-  axios.get(apiURL).then(handleResponse)
-
-  return (<div className="Forecast">
+  if(loaded){ return (<div className="Forecast">
     <div className="row">
       <div className="col">
-        <div className="forecast-day">Thu</div> <WeatherIcon code="01d"/> <div className="forecast-temp"><span className="temp-max">19º</span>
-        <span className="temp-min"> 10º</span></div>
+        <div className="forecast-day">{forecastData[0].dt}</div>
+         <WeatherIcon code={forecastData[0].weather[0].icon}/>
+          <div className="forecast-temp"><span className="temp-max">{Math.round(forecastData[0].temp.max)}º</span>
+        <span className="temp-min"> {Math.round(forecastData[0].temp.min)}º</span></div>
 
       </div>
     </div>
 
-  </div>);}
+  </div>);
+  } else { 
+  let apiKey = "35ff16e74e68adae9ff398085403f122";
+  let lon = props.coordinates.lon;
+  let lat= props.coordinates.lat;
+  let apiURL=`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&&appid=${apiKey}&units=metric`;
+
+  axios.get(apiURL).then(handleResponse)
+
+  return null;
+
+ }}
