@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
 import WeatherInfo from "./WeatherInfo";
+import Forecast from "./Forecast";
 
 export default function App(props) {
   const [weatherData, setWeatherData] = useState({ready: false});
@@ -9,6 +10,7 @@ export default function App(props) {
   function handleResponse(response){
   setWeatherData({
     ready: true,
+    coordinates: response.data.coord,
     temperature: response.data.main.temp,
     date: new Date(response.data.dt*1000),
     description: response.data.weather[0].description,
@@ -52,6 +54,8 @@ function TypeCity(){
         <input type="submit" id="current-button" value="Current position" />
       </form>
       <WeatherInfo infoWeather={weatherData}/>
+      <Forecast coordinates={weatherData.coordinates}/>
+      <a href="https://github.com/CorinnaGen/my-app">I appreciate your advice and suggestions!</a>
       
       </div>);
      }
@@ -60,5 +64,7 @@ function TypeCity(){
  
     return "Loading...";
   }
+
+
 }
 

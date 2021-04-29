@@ -5,14 +5,14 @@ import WeatherIcon from "./WeatherIcon";
 
 
 
-export default function Forecast() { 
+export default function Forecast(props) { 
 function handleResponse(response){
   console.log(response.data);
 }
 
   let apiKey = "96f0fcb6192487bc316e83fa5a2";
-  let lon ="40.7";
-  let lat= "74"
+  let lon = props.coordinates.lon;
+  let lat= props.coordinates.lat;
   let apiURL=`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude={part}&appid=${apiKey}`;
   axios.get(apiURL).then(handleResponse)
 

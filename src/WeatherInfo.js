@@ -1,7 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import TempConversion from "./TempConversion";
-import Forecast from "./Forecast";
 import WeatherIcon from "./WeatherIcon";
 
 export default function Weatherinfo(props) { return( 
@@ -25,8 +24,8 @@ export default function Weatherinfo(props) { return(
           </li>
         </ul>
       </div>
-      <Forecast />
-      <a href="https://github.com/CorinnaGen/my-app">I appreciate your advice and suggestions!</a>
+      
+      
     </div> 
     
   );
