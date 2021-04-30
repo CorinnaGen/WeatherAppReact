@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import "./Forecast.css";
 import axios from "axios";
-import WeatherIcon from "./WeatherIcon";
+import WeatherForecastDay from "./WeatherForecastDay";
 
 
 
@@ -17,10 +17,7 @@ function handleResponse(response){
   if(loaded){ return (<div className="Forecast">
     <div className="row">
       <div className="col">
-        <div className="forecast-day">{forecastData[0].dt}</div>
-         <WeatherIcon code={forecastData[0].weather[0].icon}/>
-          <div className="forecast-temp"><span className="temp-max">{Math.round(forecastData[0].temp.max)}º</span>
-        <span className="temp-min"> {Math.round(forecastData[0].temp.min)}º</span></div>
+        <WeatherForecastDay day={forecastData[1]}/>
 
       </div>
     </div>
