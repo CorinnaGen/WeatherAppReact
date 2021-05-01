@@ -8,7 +8,7 @@ export default function Weatherinfo(props) { return(
     <div className="container">
         <h1> 
           {props.infoWeather.city} <span id="heading"></span></h1> 
-         <h2> <span id="description">{props.infoWeather.description}</span></h2>
+         <h2> <span id="description">{props.infoWeather.description}</span></h2><br></br>
          <div className="float-left">
          <WeatherIcon code={props.infoWeather.icon} />
          </div>

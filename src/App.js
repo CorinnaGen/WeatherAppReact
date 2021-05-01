@@ -52,6 +52,7 @@ function TypeCity(){
         />
         <input type="submit" id="submit-button" value="Search" autoFocus/>
       </form>
+      
       <WeatherInfo infoWeather={weatherData}/>
       <Forecast coordinates={weatherData.coordinates}/>
       <a href="https://github.com/CorinnaGen/my-app">I appreciate your advice and suggestions!</a>

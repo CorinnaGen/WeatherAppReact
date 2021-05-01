@@ -43,6 +43,22 @@ li {
 a{color:#fbf2d5;
 font-size: 12px;}
 
-form{margin: auto 0;
-
+input[type=button], input[type=submit]{
+   background-color:goldenrod;
+  color: white;
+  padding: 12px 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius:3px;
+  border-color:#fbf2d5;
+  width: 16%;
+  font-size:15px;
+}
+input[type=text] {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+   border-radius:5px;
+  border-color: goldenrod;
 }
