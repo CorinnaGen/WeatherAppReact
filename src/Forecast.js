@@ -35,7 +35,7 @@ function loadingData(){let apiKey = "35ff16e74e68adae9ff398085403f122";
         if (index < 5){
           return(<div className="container" key={index}>
             <div className="row">
-      <div className="col-5" >
+      <div className="col-3" >
         <WeatherForecastDay day={dailyForecast}/>
         </div>
 </div>
