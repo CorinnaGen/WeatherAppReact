@@ -33,13 +33,10 @@ function loadingData(){let apiKey = "35ff16e74e68adae9ff398085403f122";
     <div className="row">
       {forecastData.map(function(dailyForecast, index){
         if (index < 5){
-          return(<div className="container" key={index}>
-            <div className="row">
-      <div className="col-3" >
+          return(<div className="col" key={index}>
         <WeatherForecastDay day={dailyForecast}/>
         </div>
-</div>
-      </div>);
+      );
       } else{ return null}
       })}
       
