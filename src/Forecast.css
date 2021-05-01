@@ -19,9 +19,9 @@ div.forecast-day {
   margin: auto 0;
   
 }
-div.col-1 {
+div.col-5 {
   margin: auto 0;
-  text-align: center;
+  text-align: left;
 }
 
 .row {
