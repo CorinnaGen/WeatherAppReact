@@ -45,12 +45,12 @@ function TypeCity(){
           type="text"
           id="city-input"
           placeholder="Search city"
-          autocomplete="off"
-          autofocus="on"
+          autoComplete="off"
+          autoFocus="on"
           onChange={handleCityChange}
           
         />
-        <input type="submit" id="submit-button" value="Search" autofocus/>
+        <input type="submit" id="submit-button" value="Search" autoFocus/>
       </form>
       <WeatherInfo infoWeather={weatherData}/>
       <Forecast coordinates={weatherData.coordinates}/>
