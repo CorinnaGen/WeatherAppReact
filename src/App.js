@@ -50,7 +50,7 @@ function TypeCity(){
           onChange={handleCityChange}
           
         />
-        <input type="submit" id="submit-button" value="Search" />
+        <input type="submit" id="submit-button" value="Search" autofocus/>
       </form>
       <WeatherInfo infoWeather={weatherData}/>
       <Forecast coordinates={weatherData.coordinates}/>
