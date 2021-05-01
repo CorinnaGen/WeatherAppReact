@@ -51,7 +51,6 @@ function TypeCity(){
           
         />
         <input type="submit" id="submit-button" value="Search" />
-        <input type="submit" id="current-button" value="Current position" />
       </form>
       <WeatherInfo infoWeather={weatherData}/>
       <Forecast coordinates={weatherData.coordinates}/>
