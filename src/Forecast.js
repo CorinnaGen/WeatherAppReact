@@ -14,12 +14,19 @@ function handleResponse(response){
   setLoaded(true);
 }
 
-  if(loaded){ return (<div className="Forecast">
+  if(loaded){ return (
+  <div className="Forecast">
     <div className="row">
-      <div className="col">
-        <WeatherForecastDay day={forecastData[1]}/>
+      {forecastData.map(function(dailyForecast, index){
+        if (index < 5){
+          return(
+      <div className="col" key={index}>
+        <WeatherForecastDay day={dailyForecast}/>
 
-      </div>
+      </div>);
+      } else{ return ""}
+      })}
+      
     </div>
 
   </div>);
