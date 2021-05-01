@@ -19,11 +19,9 @@ div.forecast-day {
   margin: auto 0;
   
 }
-div.col-5 {
+div.col{
   margin: auto 0;
   text-align: left;
+  
 }
 
-.row {
-  font-family: 'Shadows Into Light', cursive;
-}

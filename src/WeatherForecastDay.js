@@ -5,12 +5,12 @@ export default function ForecastDay(props){
     function maxTemp(){
         let tempMax = Math.round(props.day.temp.max);
       
-        return( `${tempMax}º`);
+        return( `${tempMax}ºC |`);
     }
 
     function minTemp(){
           let tempMin = Math.round(props.day.temp.min);
-          return (`${tempMin}º`);
+          return (`${tempMin}ºC`);
     }
 
     function displayDay(){
