@@ -3,12 +3,13 @@ import axios from "axios";
 import "./App.css";
 
 import WeatherInfo from "./WeatherInfo";
-import Forecast from "./Forecast";
+import Forecast from "../src/Forecast/Forecast";
 
-export default function App(props) {
+export default function App() {
   const [weatherData, setWeatherData] = useState({ready: false});
-  const [city, setCity] = useState(props.defaultCity);
-  function handleResponse(response){
+  const [city, setCity] = useState("Rome");
+
+const handleResponse = (response) => {
   setWeatherData({
     ready: true,
     coordinates: response.data.coord,
@@ -21,25 +22,29 @@ export default function App(props) {
     icon: response.data.weather[0].icon,
   });
   }
-function TypeCity(){
-  const apiKey = process.env.CITY_API_KEY
- let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
- axios.get(apiUrl).then(handleResponse);
+
+const searchCity = async ()=> {
+const apiKey = process.env.CITY_API_KEY
+const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+try {
+const response = await axios.get(apiUrl);
+handleResponse(response)
+}catch(error){
+  console.log(`Error fetching data ${error}`)
+}
 
 }
 
- function handleSubmit(event){
-   event.preventDefault();
-   TypeCity();
-  
- }
+const handleSubmit = (event) =>{
+  event.preventDefault();
+  searchCity();
+}
 
- function handleCityChange(event){
-   setCity(event.target.value);
+function handleCityChange(event){
+setCity(event.target.value);
+}
 
- }
 
- if(weatherData.ready) {
   return (
     <div className="App"> <form id="choose-form" onSubmit={handleSubmit}>
         <input
@@ -58,14 +63,7 @@ function TypeCity(){
       <Forecast coordinates={weatherData.coordinates}/>
       <a href="https://github.com/CorinnaGen/my-app">I appreciate your advice and suggestions!</a>
       
-      </div>);
-     }
-  else {
-    TypeCity();
- 
-    return "Loading...";
-  }
-
-
+      </div>
+      );
 }
 

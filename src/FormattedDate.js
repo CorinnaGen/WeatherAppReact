@@ -13,7 +13,8 @@ export default function FormattedDate(props) {
       minutes= `0${minutes}`;
     }
    
-    return (<div className="Date">
+    return (
+    <div className="Date">
       <h2 id="current-time">{day} {hours}:{minutes}</h2>
       <br />
     </div>

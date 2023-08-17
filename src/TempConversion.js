@@ -17,14 +17,9 @@ export default function TempConversion(props) {
     <li className="TempConversion">
        Temperature: <span>
           {Math.round(props.celsius)} <a href="/" onClick={convertToC} className="C">ºC</a> |<a href="/" onClick={convertToF} className="F"> ºF</a></span>
-          
-
-      
-  
-    
     </li>
-  );}
-  else{
+  );
+}else{
     let fahrenheit = (props.celsius* 9/5) + 32;
     return <li className="TempF">
        Temperature: <span>
