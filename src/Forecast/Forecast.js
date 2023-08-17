@@ -3,8 +3,6 @@ import "./Forecast.css";
 import axios from "axios";
 import WeatherForecastDay from "./WeatherForecastDay";
 
-
-
 export default function Forecast({ coordinates}) { 
   const[hasError, setHasError]= useState(false);
   const[forecastData, setforecastData] = useState(null);
@@ -38,7 +36,8 @@ return (
           <div className="row">
           {forecastData.map(function(dailyForecast, index){
             if (index < 5){
-              return(<div className="col" key={index}>
+              return(
+            <div className="col" key={index}>
             <WeatherForecastDay day={dailyForecast}/>
             </div>
           );

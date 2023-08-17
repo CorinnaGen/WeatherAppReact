@@ -1,6 +1,6 @@
 import React from "react";
-import WeatherIcon from "./WeatherIcon";
-
+import WeatherIcon from "../WeatherIcon";
+import { getToday } from "../utils";
 export default function WeatherForecastDay({ date }){
     const { day } = date
 
@@ -16,9 +16,8 @@ export default function WeatherForecastDay({ date }){
 
   const displayDay = () =>{
         let date = new Date(day.dt * 1000);
-        let today = date.getDay();
-         const days =["Sun","Mon", "Tue", "Wed", "Thu", "Fry", "Sat"];
-        return days[today];
+        const today = getToday(date)
+        return today
     }
     return (
 <div className="ForecastDay">

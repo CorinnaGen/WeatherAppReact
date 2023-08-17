@@ -1,21 +1,17 @@
 import React from "react";
+import { getToday, formatTime } from "./utils";
 import "./FormattedDate.css";
 
 export default function FormattedDate({ date }) {
-    let days=["Sunday", "Monday", "Tuesday","Wednesday", "Thursday", "Friday", "Saturday"];
-    let day= days[date.getDay()];
+    const today = getToday(date)
     let hours=date.getHours();
-    if (hours <10){
-      hours= `0${hours}`;
-    }
+    formatTime(hours)
     let minutes=date.getMinutes();
-    if (minutes <10){
-      minutes= `0${minutes}`;
-    }
+    formatTime(minutes)
    
     return (
     <div className="Date">
-      <h2 id="current-time">{day} {hours}:{minutes}</h2>
+      <h2 id="current-time">{`${today}, ${hours}:${minutes}`}</h2>
       <br />
     </div>
   );
