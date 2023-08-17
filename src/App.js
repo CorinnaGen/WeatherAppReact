@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
 
-import WeatherInfo from "./TodayWeatherInfo/WeatherInfo";
-import Forecast from "../src/Forecast/Forecast";
+import WeatherInfo from "./WeatherInfo/WeatherInfo";
+import Forecast from "./Weekorecast/Forecast";
 
 export default function App() {
   const [weatherData, setWeatherData] = useState({ready: false});
@@ -59,7 +59,7 @@ setCity(event.target.value);
         <input type="submit" id="submit-button" value="Search" autoFocus/>
       </form>
       
-      <WeatherInfo weatherDatar={weatherData}/>
+      <WeatherInfo weatherData={weatherData}/>
       <Forecast coordinates={weatherData.coordinates}/>
       <a href="https://github.com/CorinnaGen/my-app">I appreciate your advice and suggestions!</a>
       
