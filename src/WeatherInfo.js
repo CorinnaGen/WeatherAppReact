@@ -15,7 +15,7 @@ export default function Weatherinfo({ weatherData}) { return(
         
         <FormattedDate date={weatherData.date}/>
         <ul>
-          <TempConversion celsius={weatherData.temperature}/>
+          <TempConversion temperature={weatherData.temperature}/>
           <li>
            Humidity: <span id="humidity">{weatherData.humidity} %</span>
           </li>
