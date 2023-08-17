@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
+
 import WeatherInfo from "./WeatherInfo";
 import Forecast from "./Forecast";
 
@@ -21,7 +22,7 @@ export default function App(props) {
   });
   }
 function TypeCity(){
- const apiKey ="2ddba96f0fcb6192487bc316e83fa5a2";
+  const apiKey = process.env.CITY_API_KEY
  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
  axios.get(apiUrl).then(handleResponse);
 

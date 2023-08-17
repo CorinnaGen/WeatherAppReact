@@ -19,7 +19,8 @@ function handleResponse(response){
   setLoaded(true);
 }
 
-function loadingData(){let apiKey = "35ff16e74e68adae9ff398085403f122";
+function loadingData(){
+  const apiKey = process.env.FORECAST_API_KEY
   let lon = props.coordinates.lon;
   let lat= props.coordinates.lat;
   let apiURL=`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&&appid=${apiKey}&units=metric`;
