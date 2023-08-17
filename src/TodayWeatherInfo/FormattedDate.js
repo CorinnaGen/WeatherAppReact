@@ -1,5 +1,5 @@
 import React from "react";
-import { getToday, formatTime } from "./utils";
+import { getToday, formatTime } from "../utils";
 import "./FormattedDate.css";
 
 export default function FormattedDate({ date }) {

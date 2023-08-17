@@ -1,5 +1,5 @@
 import React from "react";
-import WeatherIcon from "../WeatherIcon";
+import WeatherIcon from "../TodayWeatherInfo/WeatherIcon";
 import { getToday } from "../utils";
 export default function WeatherForecastDay({ date }){
     const { day } = date

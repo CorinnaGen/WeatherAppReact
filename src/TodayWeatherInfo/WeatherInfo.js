@@ -12,7 +12,6 @@ export default function Weatherinfo({ weatherData}) { return(
          <div className="float-left">
          <WeatherIcon code={weatherData.icon} />
          </div>
-        
         <FormattedDate date={weatherData.date}/>
         <ul>
           <TempConversion temperature={weatherData.temperature}/>
